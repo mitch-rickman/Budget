@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --require babel-polyfill --compilers js:babel-register",
-    "build": "webpack",
-    "watch": "webpack --progress --watch"
+    "build": "webpack && pug ./src/templates --out ./build",
+    "watch": "npm run watch:js & npm run watch:pug & wait",
+    "watch:js": "webpack --progress --watch",
+    "watch:pug": "pug ./src/templates --out ./build --watch"
   },
   "dependencies": {
     "jade": "~1.11.0"
