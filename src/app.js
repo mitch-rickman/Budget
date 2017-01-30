@@ -1,3 +1,7 @@
 require('./scss/main.scss');
 
-var working = true;
+import {test} from './templates/test.js';
+test();
+var working = () => {
+  console.log('working');
+};
