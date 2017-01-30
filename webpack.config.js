@@ -1,12 +1,24 @@
+var autoprefixer = require('autoprefixer');
+var scss = require('postcss-scss');
+
 module.exports = {
   entry: "./src/app.js",
   output: {
     path: __dirname + '/build/',
+    publicPath: '/build/',
     filename: "bundle.js"
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style!css" }
+      {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  },
+  postcss: () => {
+    return [
+      autoprefixer({browsers: ['last 1 version']})
     ]
   }
 };

@@ -4,26 +4,28 @@
   "private": true,
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --require babel-polyfill --compilers js:babel-register",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --progress --watch"
   },
   "dependencies": {
-    "body-parser": "~1.15.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "~4.13.4",
-    "jade": "~1.11.0",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "jade": "~1.11.0"
   },
   "main": "",
   "devDependencies": {
+    "autoprefixer": "^6.7.0",
     "babel-polyfill": "^6.20.0",
     "babel-preset-env": "^1.1.4",
     "babel-register": "^6.18.0",
+    "css-loader": "^0.26.1",
     "mocha": "^3.2.0",
+    "node-sass": "^4.4.0",
+    "postcss-loader": "^1.2.2",
+    "postcss-scss": "^0.4.0",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
   },
-  "author": "",
+  "author": "mitch-rickman",
   "license": "ISC",
   "description": ""
 }
