@@ -1,7 +1,33 @@
-import {test} from './templates/test.js';
-require('./scss/main.scss')
+import Vue from 'vue';
 
-test();
-var working = () => {
-  console.log('working');
-};
+const app = new Vue({
+  el: '#budget',
+  data: {
+    name: "",
+    value: "",
+    categories: [
+      {
+        name: 'gas',
+        value: 30,
+      },
+      {
+        name: 'car payment',
+        value: 100,
+      }
+    ]
+  },
+  template: '<li>{{category.name}} : ${{category.value}}</li>',
+  watch: {
+    categories: (value) => {
+
+    }
+  },
+  methods: {
+    addCategory: () => {
+      this.categories.push({
+        name: this.name,
+        value: this.value
+      });
+    }
+  },
+});

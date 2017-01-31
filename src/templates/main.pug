@@ -1,1 +1,11 @@
-script(src="./bundle.js")
+<DOCTYPE !HTML>
+html
+  head
+    title Budget
+  body
+    #budget.budget
+      ul
+        li(v-for="category in categories")
+          | {{category.name}} : ${{category.value}}
+
+    script(src="js/bundle.js")

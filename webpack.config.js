@@ -4,8 +4,8 @@ var scss = require('postcss-scss');
 module.exports = {
   entry: "./src/app.js",
   output: {
-    path: __dirname + '/build/',
-    publicPath: '/build/',
+    path: __dirname + '/build/js/',
+    publicPath: '/build/js',
     filename: "bundle.js"
   },
   module: {
@@ -20,6 +20,11 @@ module.exports = {
         loaders: ['babel-loader', 'eslint-loader']
       }
     ]
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.common.js'
+    }
   },
   postcss: () => {
     return [
