@@ -5,9 +5,8 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --require babel-polyfill --compilers js:babel-register",
     "build": "webpack && pug ./src/templates --out ./build",
-    "watch": "npm run watch:js & npm run watch:pug & wait",
-    "watch:js": "webpack --progress --watch",
-    "watch:pug": "pug ./src/templates --out ./build --watch"
+    "watch": "npm run watch:js & wait",
+    "watch:js": "webpack --progress --watch"
   },
   "dependencies": {
     "vue": "^2.1.10"
@@ -19,11 +18,13 @@
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
     "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2015-webpack": "^6.4.3",
     "css-loader": "^0.26.1",
     "eslint": "^3.14.1",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-import": "^2.2.0",
+    "file-loader": "^0.10.0",
     "mocha": "^3.2.0",
     "node-sass": "^4.4.0",
     "postcss-loader": "^1.2.2",

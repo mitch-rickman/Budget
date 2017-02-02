@@ -2,7 +2,7 @@ var autoprefixer = require('autoprefixer');
 var scss = require('postcss-scss');
 
 module.exports = {
-  entry: "./src/app.js",
+  entry: "./src/js/app.js",
   output: {
     path: __dirname + '/build/js/',
     publicPath: '/build/js',

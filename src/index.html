@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Budget</title>
+  </head>
+  <body>
+    <div id="budget" class="budget">
+      <ul>
+        <envelope v-for="(envelope, index) in envelopes" :name="envelope.name" :value="envelope.value">
+      </ul>
+      <input type="text" v-model="name">
+      <input type="number" v-model="value">
+      <button type="button" v-on:click="addEnvelope">Add Envelope</button>
+    </div>
+    <script type="text/javascript" src="js/bundle.js"></script>
+  </body>
+</html>
