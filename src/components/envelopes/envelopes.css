@@ -1,0 +1,8 @@
+.envelopes__name, .envelopes__value {
+  display: inline-block;
+  width: 200px;
+}
+
+.envelopes__value {
+  font-weight: bold;
+}
